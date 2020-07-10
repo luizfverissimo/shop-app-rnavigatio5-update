@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "shop-app",
+    "slug": "shop-app",
+    "version": "1.0.0",
+    "privacy": "unlisted",
+    "orientation": "portrait",
+    "icon": "./assets/shopicon.png",
+    "splash": {
+      "image": "./assets/shopicontrans.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1ba681"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/shopicontrans.png",
+        "backgroundColor": "#1ba681"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
