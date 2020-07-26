@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { SafeAreaView, StatusBar } from "react-native";
 import { AppLoading } from 'expo'
 import * as Font from 'expo-font'
 
@@ -11,6 +12,7 @@ import ordersReducer from './store/reducers/order'
 import authReducer from './store/reducers/auth'
 
 import AppNavigator from './navigation/AppNavigator'
+import Colors from './constants/colors'
 
 
 
@@ -39,7 +41,12 @@ export default function App() {
 
   return (
     <Provider store={store} >
+      <SafeAreaView style={{ flex: 1 }}>
+      <StatusBar
+        backgroundColor={Colors.primary}
+        />
       <AppNavigator />
+      </SafeAreaView>
     </Provider>
   );
 }
