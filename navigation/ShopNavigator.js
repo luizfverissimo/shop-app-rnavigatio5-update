@@ -10,7 +10,7 @@ import * as authAction from "../store/actions/auth";
 import ProductsOverviewScreen, {
   screenOptions as productsOverviewScreenOptions,
 } from "../screens/shop/ProductsOverviewScreen";
-import ProductDetalScreen, {
+import ProductDetailScreen, {
   screenOptions as ProductDetailScreenOptions,
 } from "../screens/shop/ProductDetalScreen";
 import CartScreen, {
@@ -28,6 +28,7 @@ import EditProductScreen, {
 import AuthScreen, {screenOptions as authScreenOptions} from "../screens/user/AuthScreen";
 import StartupScreen from "../screens/StartupScreen";
 
+
 /* ------------------------------------ # ----------------------------------- */
 import Colors from "../constants/colors";
 
@@ -37,7 +38,7 @@ const defaultNavOptions = {
   headerStyle: {
     backgroundColor: Platform.OS === "android" ? Colors.primary : "",
   },
-  headerTitleStyke: {
+  headerTitleStyle: {
     fontFamily: "openSansBold",
   },
   headerBackTitleStyle: {
@@ -45,6 +46,7 @@ const defaultNavOptions = {
   },
   headerTintColor: Platform.OS === "android" ? "white" : Colors.primary,
 };
+
 
 /* ------------------------------------ # ----------------------------------- */
 const ProductsStackNavigator = createStackNavigator();
@@ -59,7 +61,7 @@ export const ProductsNavigator = () => {
       />
       <ProductsStackNavigator.Screen
         name="ProductDetail"
-        component={ProductDetalScreen}
+        component={ProductDetailScreen}
         options={ProductDetailScreenOptions}
       />
       <ProductsStackNavigator.Screen
@@ -123,6 +125,7 @@ export const AuthNavigator = () => {
 
 /* ------------------------------------ # ----------------------------------- */
 const ShopDrawerNavigator = createDrawerNavigator();
+
 
 export const ShopNavigator = () => {
   const dispatch = useDispatch();
